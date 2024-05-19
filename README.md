@@ -179,7 +179,7 @@ The MCU model we use is STM32F401RCT6, with an external 8Mhz crystal oscillator,
       ```
     
     - Powered off the whole machine
-    - Use a jumper cap to connect B0(boot0) and G(GND)
+    - Remove the jumper cap previously used to connect B0(boot0) and G(GND)
       ![image](https://github.com/FYSETC/Catalyst_Kit/assets/16657422/9fbd1c61-a14d-4de4-b591-93dc6437292f)
 
     - Power on the whole machine and wait for it to start
