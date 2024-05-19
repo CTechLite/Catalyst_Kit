@@ -115,11 +115,14 @@ https://drive.google.com/file/d/1jtd5bbeK2osySYbc_Y-N9HqvL0vuzt-D/view?usp=drive
 
 Update steps:
 
-1. plugin the USB3.0 A-A cable into the interface on the upper layer of the blue USB3.0 socket,
-2. open the "RKDevTool_Release",
-3. hold the recovery button, click the reset button, when the RKDevTool found device, release the 2 buttons
-4. Click the Upgrade Firmware tab, click the Firmware button to select the firmware, and click the Upgrade button to upgrade
-5. Wait for the upgrade to complete. Remember not to cut off the power or unplug the data cable during the process, otherwise the upgrade will fail or even damage the CM68.
+1. Install the USB drivers for the Catalyst - RK3568 - go here for the latest version: https://androidmtk.com/download-rockchip-driver-assistant
+2. Without these drivers, the RKDevTool will not be able to see the RK3568.
+3. Change the RKDevTool language if needed. The only options are Chinese (1) and English (2). Open the config.ini file in the RKDevTool_Release folder and change the "Selected=1" line to "Selected=2" to change from Chinese to English.
+4. Plug in the USB3.0 A-A cable into the interface on the upper layer of the blue USB3.0 socket and into your PC
+5. Open the "RKDevTool.exe" located in the RKDevTool_Release folder
+6. Hold the RK3568 recovery button (do not release yet), click the reset button and release, when the RKDevTool found device, release the Recovery button. These buttons are next to the Z driver, there is a reset and boot button near the Extruder driver - these are for the STM32F4 (MCU) chip do not use these - see the MCU Firmware section below. You should hear some beeps from the PC.
+7. Click the Upgrade Firmware tab, click the Firmware button to select the firmware, and click the Upgrade button to upgrade
+8. Wait for the upgrade to complete. Remember not to cut off the power or unplug the data cable during the process, otherwise the upgrade will fail or even damage the CM68.
 
 ## MCU Firmware
 
