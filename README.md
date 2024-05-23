@@ -200,6 +200,7 @@ The kit has already installed the required plug-ins, and you can access the main
 ## Connect via WiFi
 
 - First connect the machine to your LAN via Ethernet, make sure you can log in to CM68 via SSH.
+- A text editor may need to be installed to make some of the following edits. Use this command to install: sudo apt-get install nano
 - Plug the included USB wifi into any USB interface on CATALYST board
 - Use the following command checks whether the wifi module is recognized:
 ```
@@ -239,7 +240,7 @@ https://www.klipper3d.org/Resonance_Compensation.html
 
 ## 5. Wifi Connection Issues
 If you are having problems with your Catalyst wifi, please fix using the following solution. 
-
+A text editor may need to be installed to make some of the following edits. Use this command to install: sudo apt-get install nano
 SSH into the Catalyst, and run the following command `sudo nano /etc/network/interfaces`
 
 Once you have run the command, add the following lines 
@@ -257,6 +258,18 @@ iface wlan0 inet dhcp
 wpa-ssid fysetcwifi
 wpa-psk ItRocks
 ```
+If you get this error: sudo: unable to resolve host voron-02-pro: Name or service not known
+The "hosts" file needs to be edited. Use this command: sudo nano /etc/hosts
+This should open the "hosts" file and it will look like this:
+ 127.0.0.1       localhost
+::1             localhost ip6-localhost ip6-loopback
+fe00::0         ip6-localnet
+ff00::0         ip6-mcastprefix
+ff02::1         ip6-allnodes
+ff02::2         ip6-allrouters
+127.0.1.1       linaro-alip
+
+Change the last line "linaro-alip" to "voron-02-pro" or whatever your "hostname" files has
 
 
 # Support
@@ -265,7 +278,7 @@ https://discord.gg/voron
 FYSETC Facebook group: 
 https://www.facebook.com/groups/238970713918171
 FYSETC Discord:
-https://discord.gg/T3XcJPgr 
+Theis discord link is bad - put a correct and working link here
 # Buy Link
 https://www.aliexpress.us/item/3256805148633512.html
 
